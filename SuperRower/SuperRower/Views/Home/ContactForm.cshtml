@@ -1,0 +1,75 @@
+﻿@model Contact;
+@{
+    ViewData["Title"] = "ContactForm";
+}
+
+<h1>ContactForm</h1>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<form asp-action="ContactForm" method="post">
+    <div asp-validation-summary="All"></div>
+    
+    <div>
+        <div>
+            <label asp-for="NameCustomer">Imię Klienta</label><br />
+            <input type="text" asp-for="NameCustomer" /><br />
+        </div>
+        <div>
+            <label asp-for="LastNameCustomer">Nazwisko Klienta</label><br />
+            <input type="text" asp-for="LastNameCustomer" /><br />
+        </div>
+        <div>
+            <label asp-for="TelCustomer">Numer telefonu Klienta</label><br />
+            <input type="tel" asp-for="TelCustomer" /><br />
+        </div>
+        <div>
+            <label asp-for="CityAdressCustomer">Miasto zamieszkania Klienta</label><br />
+            <input type="text" asp-for="CityAdressCustomer" /><br />
+        </div>
+        <div>
+            <label asp-for="StreetAdressCustomer">Ulica zamieszkania Klienta</label><br />
+            <input type="text" asp-for="StreetAdressCustomer" /><br />
+        </div>
+        <div>
+            <label asp-for="BuildingAdressCustomer">Numer budynku zamieszkania Klienta</label><br />
+            <input type="text" asp-for="BuildingAdressCustomer" /><br />
+        </div>
+        <div>
+            <label asp-for="ApartmentAdressCustomer">Numer mieszkania  Klienta</label><br />
+            <input type="text" asp-for="ApartmentAdressCustomer" /><br />
+        </div>
+        <div>
+            <label asp-for="KodCustomer">kod pocztowy Klienta</label><br />
+            <input type="text" asp-for="KodCustomer" /><br />
+        </div>
+        <div>
+            <label asp-for="Model">Model wybranego roweru</label><br />
+            <select asp-for="Model">
+            <option value="jeden">jeden</option>
+            <option value="dwa">dwa</option>
+            <option value="trzy">trzy</option>
+            <option value="cztery">cztery</option>
+            </select> <br />
+        </div>
+        <div>
+            <label asp-for="StartDate">Data wypożyczenia roweru</label><br />
+            <input type="date" asp-for="StartDate" /><br />
+        </div>
+        <div>
+            <label asp-for="EndDate">Data oddania roweru</label><br />
+            <input type="date" asp-for="EndDate" /><br />
+        </div>
+    </div>
+
+
+
+       
+
+
+    <button type="submit">Wyślij</button><br />
+</form>
+

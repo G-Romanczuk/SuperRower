@@ -1,0 +1,34 @@
+﻿@model SuperRower.Models.Contact
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h1>Potwierdzenie przyjęcia wiadomości kontaktowej</h1>
+    <div>
+        <h3>
+            Dziękujemy za wypożyczenie roweru @Model.Model na czas <br />
+            <b>od</b> @Model.StartDate <b>do</b> @Model.StartDate <br />
+        </h3>
+        <p>
+           Sprawdź czy podane przez Ciebie dane są prawidłowe!<br />
+            Imię: @Model.NameCustomer<br />
+            Nazwisko: @Model.LastNameCustomer<br />
+            nr.tel: @Model.TelCustomer<br />
+            Miasto: @Model.CityAdressCustomer<br />
+            Adres: ul.@Model.StreetAdressCustomer @Model.BuildingAdressCustomer/@Model.ApartmentAdressCustomer <br />
+            Kod Pocztowy: @Model.KodCustomer <br />
+        </p>
+
+
+    </div>
+</body>
+</html>
