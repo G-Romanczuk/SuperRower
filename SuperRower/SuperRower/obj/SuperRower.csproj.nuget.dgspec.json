@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gxbir\\source\\repos\\SuperRower\\SuperRower\\SuperRower.csproj": {}
+    "C:\\Users\\gxbir\\Desktop\\Nowy folder\\SuperRower\\SuperRower\\SuperRower\\SuperRower.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gxbir\\source\\repos\\SuperRower\\SuperRower\\SuperRower.csproj": {
+    "C:\\Users\\gxbir\\Desktop\\Nowy folder\\SuperRower\\SuperRower\\SuperRower\\SuperRower.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gxbir\\source\\repos\\SuperRower\\SuperRower\\SuperRower.csproj",
+        "projectUniqueName": "C:\\Users\\gxbir\\Desktop\\Nowy folder\\SuperRower\\SuperRower\\SuperRower\\SuperRower.csproj",
         "projectName": "SuperRower",
-        "projectPath": "C:\\Users\\gxbir\\source\\repos\\SuperRower\\SuperRower\\SuperRower.csproj",
+        "projectPath": "C:\\Users\\gxbir\\Desktop\\Nowy folder\\SuperRower\\SuperRower\\SuperRower\\SuperRower.csproj",
         "packagesPath": "C:\\Users\\gxbir\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gxbir\\source\\repos\\SuperRower\\SuperRower\\obj\\",
+        "outputPath": "C:\\Users\\gxbir\\Desktop\\Nowy folder\\SuperRower\\SuperRower\\SuperRower\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
