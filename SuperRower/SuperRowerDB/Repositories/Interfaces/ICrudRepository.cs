@@ -9,7 +9,7 @@ namespace SuperRowerDB
     public interface ICrudRepository<Entity> where Entity : class
     {
         void Create(Entity entity);
-        Entity GetById(string id);
+        Entity GetById(int id);
         void Delete(Entity entity);
         void Update(Entity entity);
 

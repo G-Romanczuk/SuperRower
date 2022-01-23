@@ -15,7 +15,7 @@ namespace SuperRowerDB
 
             public void Create(RowerPrice RowerPrice) => DbSet.Add(RowerPrice);
             public void Delete(RowerPrice RowerPrice) => DbSet.Remove(DbSet.Where(x => x.RowerPriceID == RowerPrice.RowerPriceID).FirstOrDefault());
-            public RowerPrice GetById(string id) => DbSet.FirstOrDefault(x => x.RowerPriceID.ToString() == id);
+            public RowerPrice GetById(int id) => DbSet.FirstOrDefault(x => x.RowerPriceID == id);
             public void Update(RowerPrice RowerPrice)
             {
                 RowerPrice.Price = RowerPrice.Price;

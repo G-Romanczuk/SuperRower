@@ -14,7 +14,7 @@ namespace SuperRowerDB
 
         public void Create(Transaction Transaction) => DbSet.Add(Transaction);
         public void Delete(Transaction Transaction) => DbSet.Remove(DbSet.Where(x => x.TransactionID == Transaction.TransactionID).FirstOrDefault());
-        public Transaction GetById(string id) => DbSet.FirstOrDefault(x => x.TransactionID.ToString() == id);
+        public Transaction GetById(int id) => DbSet.FirstOrDefault(x => x.TransactionID == id);
         public void Update(Transaction Transaction)
         {
             var foundTransaction = DbSet.Where(x => x.TransactionID == Transaction.TransactionID).FirstOrDefault();

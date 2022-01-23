@@ -33,13 +33,28 @@ namespace SuperRowerDB
             }
             
         }
-        public void Delete(Customer Customer) => DbSet.Remove(DbSet.Where(x => x.CustomerID == Customer.CustomerID).FirstOrDefault());
-        public void Create(Customer Customer) => DbSet.Add(Customer);
-        public Customer GetById(int id) => DbSet.FirstOrDefault(x => x.CustomerID == id);
+        public void Delete(Customer Customer)
+        {
+            DbSet.Remove(DbSet.Where(x => x.CustomerID == Customer.CustomerID).FirstOrDefault());
+            SaveChanges();
+        }
+
+        public void Create(Customer Customer)
+        {
+            DbSet.Add(Customer);
+            SaveChanges();
+        }
+
+        public Customer GetById(int id)
+        {
+            return DbSet.FirstOrDefault(x => x.CustomerID == id);
+            SaveChanges();
+        }
 
         public Customer GetById(string id)
         {
             throw new NotImplementedException();
         }
+
     }
 }

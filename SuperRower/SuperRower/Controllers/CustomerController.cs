@@ -32,22 +32,25 @@ namespace SuperRower.Controllers
 
         public IActionResult Index()
         {
+
             var bases = _customerRepository.GetAll();
-            return View();
+
+            return View(bases);
         }
 
         public IActionResult Details(int id)
         {
             var dto = _customerRepository.GetAll().Where(x => x.CustomerID == id).FirstOrDefault();
 
-            return View();
+            return View(dto);
         }
 
         public IActionResult Edit(int id)
         {
             var cus = _customerRepository.GetAll().Where(x => x.CustomerID == id).FirstOrDefault();
+            
 
-            return View("");
+            return View(cus);
         }
 
         [HttpPost]
@@ -66,25 +69,16 @@ namespace SuperRower.Controllers
                 KodCustomer = customer.KodCustomer,
             };
             _customerRepository.Update(customerDb);
-            return View("");
+            return View(customerDb);
         }
 
-        public IActionResult Delete(CustomerViewModel customer)
+        public IActionResult Delete(int id)
         {
-            var customerDb = new Customer
-            {
-                CustomerID = customer.CustomerID,
-                NameCustomer = customer.NameCustomer,
-                LastNameCustomer = customer.LastNameCustomer,
-                TelCustomer = customer.TelCustomer,
-                CityAdressCustomer = customer.CityAdressCustomer,
-                StreetAdressCustomer = customer.StreetAdressCustomer,
-                BuildingAdressCustomer = customer.BuildingAdressCustomer,
-                ApartmentAdressCustomer = customer.ApartmentAdressCustomer,
-                KodCustomer = customer.KodCustomer,
-            };
-            _customerRepository.Delete(customerDb);
-            return View("");
+          var x =  _customerRepository.GetById(id);
+            _customerRepository.Delete(x);
+
+            var bases = _customerRepository.GetAll();
+            return View("Index", bases);
         }
 
         public IActionResult Add() => View();
@@ -92,6 +86,7 @@ namespace SuperRower.Controllers
         [HttpPost]
         public IActionResult Add(CustomerViewModel customer)
         {
+           
 
             var customerDb = new Customer
             {
@@ -106,7 +101,10 @@ namespace SuperRower.Controllers
                 KodCustomer = customer.KodCustomer,
             };
             _customerRepository.Create(customerDb);
-            return View("");
+            var bases = _customerRepository.GetAll();
+
+           
+            return View("Index", bases);
         }
     }
 }

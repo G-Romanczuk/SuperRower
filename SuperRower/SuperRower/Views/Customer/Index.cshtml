@@ -1,4 +1,4 @@
-﻿@model IEnumerable<SuperRower.Models.CustomerViewModel>
+﻿@model List<SuperRowerDB.Customer>
 
 @{
     ViewData["Title"] = "Index";
@@ -8,37 +8,37 @@
 <h1>Index</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Add">Create New</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.CustomerID)
+                CustomerID
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.NameCustomer)
+                NameCustomer
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.LastNameCustomer)
+                LastNameCustomer
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.TelCustomer)
+                TelCustomer
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CityAdressCustomer)
+                CityAdressCustomer
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.StreetAdressCustomer)
+               StreetAdressCustomer
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.BuildingAdressCustomer)
+                BuildingAdressCustomer
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ApartmentAdressCustomer)
+                ApartmentAdressCustomer
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.KodCustomer)
+                KodCustomer
             </th>
             <th></th>
         </tr>
@@ -74,9 +74,9 @@
                 @Html.DisplayFor(modelItem => item.KodCustomer)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                @Html.ActionLink("Edit", "Edit", new {  id=item.CustomerID  }) |
+                @Html.ActionLink("Details", "Details", new {  id=item.CustomerID }) |
+                @Html.ActionLink("Delete", "Delete", new {  id=item.CustomerID  })
             </td>
         </tr>
 }

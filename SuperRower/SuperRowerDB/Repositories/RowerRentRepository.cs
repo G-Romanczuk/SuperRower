@@ -14,7 +14,7 @@ namespace SuperRowerDB
 
         public void Create(RowerRent RowerRent) => DbSet.Add(RowerRent);
         public void Delete(RowerRent RowerRent) => DbSet.Remove(DbSet.Where(x => x.RowerRentID == RowerRent.RowerRentID).FirstOrDefault());
-        public RowerRent GetById(string id) => DbSet.FirstOrDefault(x => x.RowerRentID.ToString() == id);
+        public RowerRent GetById(int id) => DbSet.FirstOrDefault(x => x.RowerRentID == id);
 
         public void Update(RowerRent RowerRent)
         {
