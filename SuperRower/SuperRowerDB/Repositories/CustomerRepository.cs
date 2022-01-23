@@ -29,7 +29,9 @@ namespace SuperRowerDB
                 foundCustomer.KodCustomer = Customer.KodCustomer;
                 foundCustomer.TelCustomer = Customer.TelCustomer;
                 foundCustomer.BuildingAdressCustomer = Customer.BuildingAdressCustomer;
+                SaveChanges();
             }
+            
         }
         public void Delete(Customer Customer) => DbSet.Remove(DbSet.Where(x => x.CustomerID == Customer.CustomerID).FirstOrDefault());
         public void Create(Customer Customer) => DbSet.Add(Customer);

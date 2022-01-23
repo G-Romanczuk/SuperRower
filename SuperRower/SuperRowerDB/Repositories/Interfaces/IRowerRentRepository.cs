@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SuperRowerDB
 {
-    public interface IRowerRentRepository
+    public interface IRowerRentRepository : ICrudRepository<RowerRent>
     {
         List<RowerRent> GetAll();
         void SaveChanges();

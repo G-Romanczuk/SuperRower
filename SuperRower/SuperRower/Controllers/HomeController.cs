@@ -28,11 +28,7 @@ namespace SuperRower.Controllers
             return View();
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
+        
 
         [HttpGet]
         public ViewResult ContactForm()
@@ -54,6 +50,19 @@ namespace SuperRower.Controllers
                 return View();
             }
         }
+
+        private static List<Contact> _contacts = new List<Contact>()
+{
+    new Contact()
+    {
+         NameCustomer = "Adam", LastNameCustomer = "Nowak",
+          TelCustomer = "503562703",  CityAdressCustomer = "Adam",
+           StreetAdressCustomer = "Adam", BuildingAdressCustomer = "Adam",
+           ApartmentAdressCustomer = "Adam", KodCustomer = "Adam", Model = "jeden",
+        StartDate = "2020-10-23", EndDate = "2020-10-24"
+        }
+};
+
 
     }
 }

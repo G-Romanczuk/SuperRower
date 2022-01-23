@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SuperRowerDB
 {
-    public interface ITransactionRepository
+    public interface ITransactionRepository : ICrudRepository<Transaction>
     {
         List<Transaction> GetAll();
         void SaveChanges();
