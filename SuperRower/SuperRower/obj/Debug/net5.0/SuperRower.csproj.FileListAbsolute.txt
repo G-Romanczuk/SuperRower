@@ -195,3 +195,4 @@ C:\Users\gxbir\Desktop\Nowy folder\SuperRower\SuperRower\SuperRower\bin\Debug\ne
 C:\Users\gxbir\Desktop\Nowy folder\SuperRower\SuperRower\SuperRower\bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\gxbir\Desktop\Nowy folder\SuperRower\SuperRower\SuperRower\bin\Debug\net5.0\runtimes\win-arm\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
 C:\Users\gxbir\Desktop\Nowy folder\SuperRower\SuperRower\SuperRower\bin\Debug\net5.0\runtimes\win-arm64\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
+C:\Users\gxbir\Desktop\Nowy folder\SuperRower\SuperRower\SuperRower\obj\Debug\net5.0\Razor\Views\Customer\Index.cshtml.g.cs

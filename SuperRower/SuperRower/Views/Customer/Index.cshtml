@@ -1,0 +1,84 @@
+﻿@model IEnumerable<SuperRower.Models.CustomerViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CustomerID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NameCustomer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastNameCustomer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TelCustomer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CityAdressCustomer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StreetAdressCustomer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BuildingAdressCustomer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ApartmentAdressCustomer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KodCustomer)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NameCustomer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastNameCustomer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TelCustomer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CityAdressCustomer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StreetAdressCustomer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BuildingAdressCustomer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ApartmentAdressCustomer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.KodCustomer)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
