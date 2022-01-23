@@ -7,42 +7,37 @@ using System.Threading.Tasks;
 
 namespace SuperRowerDB
 {
-    class CustomerRepository
+    public class CustomerRepository: BaseRepository<Customer>, ICustomerRepository, ICrudRepository<Customer>
     {
-        private readonly SuperRowerDbContext _dbContext;
+        public CustomerRepository(SuperRowerDbContext dbContext) : base(dbContext) { }
+        protected override DbSet<Customer> DbSet => _dbContext.Customers;
 
-        private DbSet<Customer> Customers => _dbContext.Customers;
-
-        public CustomerRepository(SuperRowerDbContext dbContext)
+        public void Update(Customer Customer)
         {
-            _dbContext = dbContext;
+            var foundCustomer = DbSet.Where(x => x.CustomerID == Customer.CustomerID).FirstOrDefault();
+            if (foundCustomer == null)
+            {
+                Create(Customer);
+            }
+            else
+            {
+                foundCustomer.StreetAdressCustomer = Customer.StreetAdressCustomer;
+                foundCustomer.CityAdressCustomer = Customer.CityAdressCustomer;
+                foundCustomer.ApartmentAdressCustomer = Customer.ApartmentAdressCustomer;
+                foundCustomer.LastNameCustomer = Customer.LastNameCustomer;
+                foundCustomer.NameCustomer = Customer.NameCustomer;
+                foundCustomer.KodCustomer = Customer.KodCustomer;
+                foundCustomer.TelCustomer = Customer.TelCustomer;
+                foundCustomer.BuildingAdressCustomer = Customer.BuildingAdressCustomer;
+            }
         }
+        public void Delete(Customer Customer) => DbSet.Remove(DbSet.Where(x => x.CustomerID == Customer.CustomerID).FirstOrDefault());
+        public void Create(Customer Customer) => DbSet.Add(Customer);
+        public Customer GetById(int id) => DbSet.FirstOrDefault(x => x.CustomerID == id);
 
-        public List<Customer> GetAllUsers()
+        public Customer GetById(string id)
         {
-
-            return new List<Customer>();
-        }
-
-        public void UpdateUser(Customer customer)
-        {
-
-        }
-
-        public void DeleteUser(Customer customer)
-        {
-
-        }
-
-        public void AddUser(Customer customer)
-        {
-
-        }
-
-        public void SaveChanges()
-        {
-
+            throw new NotImplementedException();
         }
     }
 }
-

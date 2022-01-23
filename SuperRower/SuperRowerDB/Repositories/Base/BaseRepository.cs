@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using SuperRowerDB;
 
-namespace SuperRower.database
+namespace SuperRowerDB
 {
     public abstract class BaseRepository<Entity> where Entity : class
     {
@@ -15,10 +14,8 @@ namespace SuperRower.database
 
         protected abstract DbSet<Entity> DbSet { get; }
 
-        public BaseRepository(SuperRowerDbContext dbContext)
-        {
-            _dbContext = dbContext;
-        }
+        protected BaseRepository(SuperRowerDbContext dbContext) => _dbContext = dbContext;
+        
 
         public List<Entity> GetAll()
         {

@@ -26,8 +26,16 @@ namespace SuperRower
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<SuperRowerDbContext>(options=>options.UseSqlServer("Server=.;Database=SuperRowerDB;Trusted_Connection=True;"));
-          
             services.AddControllersWithViews();
+
+            services.AddScoped<ICustomerRepository, CustomerRepository>();
+            services.AddScoped<ICrudRepository<Customer>, CustomerRepository>();
+            services.AddScoped<IRowerPriceRepository, RowerPriceRepository>();
+            services.AddScoped<ICrudRepository<RowerPrice>, RowerPriceRepository>();
+            services.AddScoped<IRowerRentRepository, RowerRentRepository>();
+            services.AddScoped<ICrudRepository<RowerRent>, RowerRentRepository>();
+            services.AddScoped<ITransactionRepository, TransactionRepository>();
+            services.AddScoped<ICrudRepository<Transaction>, TransactionRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -7,41 +7,18 @@ using System.Threading.Tasks;
 
 namespace SuperRowerDB
 {
-    class RowerPriceRepository
-    {
-        private readonly SuperRowerDbContext _dbContext;
-
-        private DbSet<RowerPrice> RowerPrices => _dbContext.Prices;
-
-        public RowerPriceRepository(SuperRowerDbContext dbContext)
+    
+        public class RowerPriceRepository : BaseRepository<RowerPrice>, IRowerPriceRepository, ICrudRepository<RowerPrice>
         {
-            _dbContext = dbContext;
-        }
+            public RowerPriceRepository(SuperRowerDbContext dbContext) : base(dbContext) { }
+            protected override DbSet<RowerPrice> DbSet => _dbContext.Prices;
 
-        public List<RowerPrice> GetAllUsers()
-        {
-
-            return new List<RowerPrice>();
-        }
-
-        public void UpdateUser(RowerPrice rowerPrice)
-        {
-
-        }
-
-        public void DeleteUser(RowerPrice rowerPrice)
-        {
-
-        }
-
-        public void AddUser(RowerPrice rowerPrice)
-        {
-
-        }
-
-        public void SaveChanges()
-        {
-
+            public void Create(RowerPrice RowerPrice) => DbSet.Add(RowerPrice);
+            public void Delete(RowerPrice RowerPrice) => DbSet.Remove(DbSet.Where(x => x.RowerPriceID == RowerPrice.RowerPriceID).FirstOrDefault());
+            public RowerPrice GetById(string id) => DbSet.FirstOrDefault(x => x.RowerPriceID.ToString() == id);
+            public void Update(RowerPrice RowerPrice)
+            {
+                RowerPrice.Price = RowerPrice.Price;
+            }
         }
     }
-}

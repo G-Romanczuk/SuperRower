@@ -7,41 +7,30 @@ using System.Threading.Tasks;
 
 namespace SuperRowerDB
 {
-    class RowerRentRepository
+    public class RowerRentRepository : BaseRepository<RowerRent>, ICrudRepository<RowerRent>, IRowerRentRepository
     {
-     private readonly SuperRowerDbContext _dbContext;
+        public RowerRentRepository(SuperRowerDbContext dbContext) : base(dbContext) { }
+        protected override DbSet<RowerRent> DbSet => _dbContext.RowerRents;
 
-        private DbSet<RowerRent> RowerRents => _dbContext.RowerRents;
+        public void Create(RowerRent RowerRent) => DbSet.Add(RowerRent);
+        public void Delete(RowerRent RowerRent) => DbSet.Remove(DbSet.Where(x => x.RowerRentID == RowerRent.RowerRentID).FirstOrDefault());
+        public RowerRent GetById(string id) => DbSet.FirstOrDefault(x => x.RowerRentID.ToString() == id);
 
-        public RowerRentRepository(SuperRowerDbContext dbContext)
+        public void Update(RowerRent RowerRent)
         {
-            _dbContext = dbContext;
-        }
-
-        public List<RowerRent> GetAllUsers()
-        {
-
-            return new List<RowerRent>();
-        }
-
-        public void UpdateUser(RowerRent rowerRent)
-        {
-
-        }
-
-        public void DeleteUser(RowerRent rowerRent)
-        {
-
-        }
-
-        public void AddUser(RowerRent rowerRent)
-        {
-
-        }
-
-        public void SaveChanges()
-        {
-
+            var foundRowerRent = DbSet.Where(x => x.RowerRentID == RowerRent.RowerRentID).FirstOrDefault();
+            if (foundRowerRent == null)
+            {
+                Create(RowerRent);
+            }
+            else
+            {
+                foundRowerRent.Country = RowerRent.Country;
+                foundRowerRent.Model= RowerRent.Model;
+                foundRowerRent.Producent = RowerRent.Producent;
+                foundRowerRent.Type = RowerRent.Type;
+                foundRowerRent.Year = RowerRent.Year;
+            }
         }
     }
 }

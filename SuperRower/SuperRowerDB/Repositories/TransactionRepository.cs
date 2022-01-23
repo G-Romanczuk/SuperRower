@@ -7,41 +7,26 @@ using System.Threading.Tasks;
 
 namespace SuperRowerDB
 {
-    class TransactionRepository
+    public class TransactionRepository : BaseRepository<Transaction>, ICrudRepository<Transaction>, ITransactionRepository
     {
-        private readonly SuperRowerDbContext _dbContext;
+        public TransactionRepository(SuperRowerDbContext dbContext) : base(dbContext) { }
+        protected override DbSet<Transaction> DbSet => _dbContext.Transactions;
 
-        private DbSet<Transaction> Transactions => _dbContext.Transactions;
-
-        public TransactionRepository(SuperRowerDbContext dbContext)
+        public void Create(Transaction Transaction) => DbSet.Add(Transaction);
+        public void Delete(Transaction Transaction) => DbSet.Remove(DbSet.Where(x => x.TransactionID == Transaction.TransactionID).FirstOrDefault());
+        public Transaction GetById(string id) => DbSet.FirstOrDefault(x => x.TransactionID.ToString() == id);
+        public void Update(Transaction Transaction)
         {
-            _dbContext = dbContext;
+            var foundTransaction = DbSet.Where(x => x.TransactionID == Transaction.TransactionID).FirstOrDefault();
+            if (foundTransaction == null)
+            {
+                Create(Transaction);
+            }
+            else
+            {
+                foundTransaction.StartDate = Transaction.StartDate;
+                foundTransaction.EndDate = Transaction.EndDate;
+            }
         }
-
-        public List<Transaction> GetAllUsers()
-        {
-
-            return new List<Transaction>();
-        }
-
-        public void UpdateUser(Transaction transaction)
-        {
-
-        }
-
-        public void DeleteUser(Transaction transaction)
-        {
-
-        }
-
-        public void AddUser(Transaction transaction)
-        {
-
-        }
-
-        public void SaveChanges()
-        {
-
-        }
-    }
+    } 
 }
