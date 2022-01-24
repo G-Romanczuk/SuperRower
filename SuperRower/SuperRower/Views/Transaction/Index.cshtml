@@ -1,0 +1,66 @@
+﻿@model List<SuperRowerDB.Transaction>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Add">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+               TransactionID
+            </th>
+            <th>
+               CustomerIF
+            </th>
+            <th>
+               RowerPriceIF
+            </th>
+            <th>
+               RowerRentIF
+            </th>
+            <th>
+              StartDate
+            </th>
+            <th>
+              EndDate
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TransactionID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerIF)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RowerPriceIF)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RowerRentIF)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EndDate)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.TransactionID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.TransactionID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.TransactionID })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

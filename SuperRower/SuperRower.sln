@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.31112.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SuperRowerDB", "SuperRowerDB\SuperRowerDB.csproj", "{68676485-CDAF-4535-888E-118D9E6F09C9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SuperRower", "SuperRower\SuperRower.csproj", "{5D3E6189-8A33-471F-9231-EED31ADB0DCD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SuperRower", "SuperRower\SuperRower.csproj", "{9D275C3B-0CA9-4A20-8565-E534D4E5C85C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{68676485-CDAF-4535-888E-118D9E6F09C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68676485-CDAF-4535-888E-118D9E6F09C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68676485-CDAF-4535-888E-118D9E6F09C9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5D3E6189-8A33-471F-9231-EED31ADB0DCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5D3E6189-8A33-471F-9231-EED31ADB0DCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5D3E6189-8A33-471F-9231-EED31ADB0DCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5D3E6189-8A33-471F-9231-EED31ADB0DCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D275C3B-0CA9-4A20-8565-E534D4E5C85C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D275C3B-0CA9-4A20-8565-E534D4E5C85C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D275C3B-0CA9-4A20-8565-E534D4E5C85C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D275C3B-0CA9-4A20-8565-E534D4E5C85C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

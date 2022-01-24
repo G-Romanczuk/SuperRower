@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SuperRower.Models
 {
-    public class TransactionViewModel : Controller
+    public class TransactionViewModel 
     {
         public int TransactionID { get; set; }
         public int RowerPrice { get; set; }

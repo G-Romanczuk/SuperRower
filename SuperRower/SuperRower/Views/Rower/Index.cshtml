@@ -1,0 +1,66 @@
+﻿@model List<SuperRowerDB.RowerRent>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Add">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+               RowerRentID
+            </th>
+            <th>
+                Model
+            </th>
+            <th>
+               Producent
+            </th>
+            <th>
+                Country
+            </th>
+            <th>
+                Year
+            </th>
+            <th>
+               Type
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.RowerRentID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Model)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Producent)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Country)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Year)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Type)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.RowerRentID }) |
+                @Html.ActionLink("Details", "Details", new {  id=item.RowerRentID  }) |
+                @Html.ActionLink("Delete", "Delete", new {  id=item.RowerRentID  })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

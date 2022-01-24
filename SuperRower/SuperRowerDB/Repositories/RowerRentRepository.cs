@@ -12,8 +12,18 @@ namespace SuperRowerDB
         public RowerRentRepository(SuperRowerDbContext dbContext) : base(dbContext) { }
         protected override DbSet<RowerRent> DbSet => _dbContext.RowerRents;
 
-        public void Create(RowerRent RowerRent) => DbSet.Add(RowerRent);
-        public void Delete(RowerRent RowerRent) => DbSet.Remove(DbSet.Where(x => x.RowerRentID == RowerRent.RowerRentID).FirstOrDefault());
+        public void Create(RowerRent RowerRent)
+        {
+            DbSet.Add(RowerRent);
+            SaveChanges();
+        }
+
+        public void Delete(RowerRent RowerRent)
+        {
+            DbSet.Remove(DbSet.Where(x => x.RowerRentID == RowerRent.RowerRentID).FirstOrDefault());
+            SaveChanges();
+        }
+
         public RowerRent GetById(int id) => DbSet.FirstOrDefault(x => x.RowerRentID == id);
 
         public void Update(RowerRent RowerRent)
@@ -30,6 +40,7 @@ namespace SuperRowerDB
                 foundRowerRent.Producent = RowerRent.Producent;
                 foundRowerRent.Type = RowerRent.Type;
                 foundRowerRent.Year = RowerRent.Year;
+                SaveChanges();
             }
         }
     }

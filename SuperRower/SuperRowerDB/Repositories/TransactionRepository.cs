@@ -12,9 +12,24 @@ namespace SuperRowerDB
         public TransactionRepository(SuperRowerDbContext dbContext) : base(dbContext) { }
         protected override DbSet<Transaction> DbSet => _dbContext.Transactions;
 
-        public void Create(Transaction Transaction) => DbSet.Add(Transaction);
-        public void Delete(Transaction Transaction) => DbSet.Remove(DbSet.Where(x => x.TransactionID == Transaction.TransactionID).FirstOrDefault());
-        public Transaction GetById(int id) => DbSet.FirstOrDefault(x => x.TransactionID == id);
+        public void Create(Transaction Transaction)
+        {
+            DbSet.Add(Transaction);
+            SaveChanges();
+        }
+
+        public void Delete(Transaction Transaction)
+        {
+            DbSet.Remove(DbSet.Where(x => x.TransactionID == Transaction.TransactionID).FirstOrDefault());
+            SaveChanges();
+        }
+
+        public Transaction GetById(int id)
+        {
+            return DbSet.FirstOrDefault(x => x.TransactionID == id);
+            SaveChanges();
+        }
+
         public void Update(Transaction Transaction)
         {
             var foundTransaction = DbSet.Where(x => x.TransactionID == Transaction.TransactionID).FirstOrDefault();
@@ -26,6 +41,7 @@ namespace SuperRowerDB
             {
                 foundTransaction.StartDate = Transaction.StartDate;
                 foundTransaction.EndDate = Transaction.EndDate;
+                SaveChanges();
             }
         }
     } 

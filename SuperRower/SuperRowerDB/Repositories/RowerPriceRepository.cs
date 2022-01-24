@@ -13,12 +13,31 @@ namespace SuperRowerDB
             public RowerPriceRepository(SuperRowerDbContext dbContext) : base(dbContext) { }
             protected override DbSet<RowerPrice> DbSet => _dbContext.Prices;
 
-            public void Create(RowerPrice RowerPrice) => DbSet.Add(RowerPrice);
-            public void Delete(RowerPrice RowerPrice) => DbSet.Remove(DbSet.Where(x => x.RowerPriceID == RowerPrice.RowerPriceID).FirstOrDefault());
-            public RowerPrice GetById(int id) => DbSet.FirstOrDefault(x => x.RowerPriceID == id);
-            public void Update(RowerPrice RowerPrice)
+        public void Create(RowerPrice RowerPrice)
+        {
+            DbSet.Add(RowerPrice);
+            SaveChanges();
+        }
+
+        public void Delete(RowerPrice RowerPrice)
+        {
+            DbSet.Remove(DbSet.Where(x => x.RowerPriceID == RowerPrice.RowerPriceID).FirstOrDefault());
+            SaveChanges();
+        }
+
+        public RowerPrice GetById(int id)
+        {
+            return DbSet.FirstOrDefault(x => x.RowerPriceID == id);
+            SaveChanges();
+        }
+
+        public void Update(RowerPrice RowerPrice)
             {
-                RowerPrice.Price = RowerPrice.Price;
+            var foundRowerPrice = DbSet.Where(x => x.RowerPriceID == RowerPrice.RowerPriceID).FirstOrDefault();
+           
+                foundRowerPrice.Price = RowerPrice.Price;
+                SaveChanges();
+            
             }
         }
     }

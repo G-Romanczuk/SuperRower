@@ -1,0 +1,42 @@
+﻿@model IEnumerable<SuperRowerDB.RowerPrice>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Add">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                RowerPriceID
+            </th>
+            <th>
+                Price
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.RowerPriceID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.RowerPriceID }) |
+                @Html.ActionLink("Details", "Details", new { id=item.RowerPriceID }) |
+                @Html.ActionLink("Delete", "Delete", new {  id=item.RowerPriceID })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
