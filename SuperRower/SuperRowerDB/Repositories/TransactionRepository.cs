@@ -27,7 +27,7 @@ namespace SuperRowerDB
         public Transaction GetById(int id)
         {
             return DbSet.FirstOrDefault(x => x.TransactionID == id);
-            SaveChanges();
+          
         }
 
         public void Update(Transaction Transaction)

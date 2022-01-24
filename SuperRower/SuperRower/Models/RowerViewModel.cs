@@ -28,6 +28,7 @@ namespace SuperRower.Models
         [Range(1920, 2021, ErrorMessage = "Proszę podać poprawny rok produkcji!")]
         public string Year { get; set; }
         [DisplayName("Typ roweru")]
+        [MinLength(length: 3, ErrorMessage = "Proszę podać poprawny typ modelu!")]
         public string Type { get; set; }
     }
     }

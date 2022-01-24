@@ -48,7 +48,7 @@ namespace SuperRowerDB
         public Customer GetById(int id)
         {
             return DbSet.FirstOrDefault(x => x.CustomerID == id);
-            SaveChanges();
+          
         }
 
         public Customer GetById(string id)

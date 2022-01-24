@@ -28,7 +28,7 @@ namespace SuperRowerDB
         public RowerPrice GetById(int id)
         {
             return DbSet.FirstOrDefault(x => x.RowerPriceID == id);
-            SaveChanges();
+            
         }
 
         public void Update(RowerPrice RowerPrice)
