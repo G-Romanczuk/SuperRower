@@ -6,30 +6,20 @@ using System.Linq;
 using System.Threading.Tasks;
 using SuperRower.Controllers;
 using SuperRower.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace SuperRower.Controllers
 {
   
-
+        [Authorize]
         public class TransactionController : Controller
         {
-            private readonly ICustomerRepository _customerRepository;
-            private readonly IRowerRentRepository _rowerRentRepository;
-            private readonly IRowerPriceRepository _rowerPriceRepository;
             private readonly ITransactionRepository _transactionRepository;
-            private readonly IServiceProvider _serviceProvider;
 
-            public TransactionController(ICustomerRepository customerRepository,
-                                     IRowerRentRepository rowerRentRepository,
-                                     IRowerPriceRepository rowerPriceRepository,
-                                      ITransactionRepository transactionRepository,
-                                     IServiceProvider serviceProvider)
+            public TransactionController(
+                                      ITransactionRepository transactionRepository)
             {
-                _customerRepository = customerRepository;
-                _rowerRentRepository = rowerRentRepository;
-                _rowerPriceRepository = rowerPriceRepository;
                 _transactionRepository = transactionRepository;
-                _serviceProvider = serviceProvider;
             }
 
             public IActionResult Index()
@@ -81,17 +71,10 @@ namespace SuperRower.Controllers
             public IActionResult Add() => View();
 
             [HttpPost]
-            public IActionResult Add(TransactionViewModel transaction)
+            public IActionResult Add(SuperRowerDB.Transaction transaction)
             {
 
-
-                var transactionDb = new Transaction
-                {
-                    TransactionID = transaction.TransactionID,
-                    StartDate = transaction.StartDate,
-                    EndDate = transaction.EndDate
-                };
-                _transactionRepository.Create(transactionDb);
+                _transactionRepository.Create(transaction);
                 var bases = _transactionRepository.GetAll();
 
 

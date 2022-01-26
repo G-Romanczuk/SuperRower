@@ -10,6 +10,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using SuperRowerDB;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 
 namespace SuperRower
 {
@@ -24,7 +25,10 @@ namespace SuperRower
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
+
         {
+            services.AddIdentity<IdentityUser, IdentityRole>()
+                   .AddEntityFrameworkStores<SuperRowerDbContext>();
             services.AddDbContext<SuperRowerDbContext>(options=>options.UseSqlServer("Server=.;Database=SuperRowerDB;Trusted_Connection=True;"));
             services.AddControllersWithViews();
 
@@ -55,7 +59,7 @@ namespace SuperRower
             app.UseStaticFiles();
 
             app.UseRouting();
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
@@ -67,6 +71,8 @@ namespace SuperRower
 
             var database = serviceProvider.GetService<SuperRowerDbContext>();
             database.Database.Migrate();
+
+            
         }
     }
 }

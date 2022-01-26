@@ -5,16 +5,15 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Index</h1>
+<h1>Lista możliwych typów rowerów</h1>
 
 <p>
-    <a asp-action="Add">Create New</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-               RowerRentID
+               Numer roweru
             </th>
             <th>
                 Model
@@ -23,13 +22,13 @@
                Producent
             </th>
             <th>
-                Country
+                Kraj produkcji
             </th>
             <th>
-                Year
+                Rok produkcji
             </th>
             <th>
-               Type
+               Typ roweru
             </th>
             <th></th>
         </tr>
@@ -57,7 +56,6 @@
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id=item.RowerRentID }) |
-                @Html.ActionLink("Details", "Details", new {  id=item.RowerRentID  }) |
                 @Html.ActionLink("Delete", "Delete", new {  id=item.RowerRentID  })
             </td>
         </tr>

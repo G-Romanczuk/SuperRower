@@ -5,29 +5,19 @@ using System.Linq;
 using System.Threading.Tasks;
 using SuperRowerDB;
 using SuperRower.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace SuperRower.Controllers
     
 {
+    [Authorize]
     public class CustomerController : Controller
     {
         private readonly ICustomerRepository _customerRepository;
-        private readonly IRowerRentRepository _rowerRentRepository;
-        private readonly IRowerPriceRepository _rowerPriceRepository;
-        private readonly ITransactionRepository _transactionRepository;
-        private readonly IServiceProvider _serviceProvider;
 
-        public CustomerController(ICustomerRepository customerRepository,
-                                 IRowerRentRepository rowerRentRepository,
-                                 IRowerPriceRepository rowerPriceRepository,
-                                  ITransactionRepository transactionRepository,
-                                 IServiceProvider serviceProvider)
+        public CustomerController(ICustomerRepository customerRepository)
         {
             _customerRepository = customerRepository;
-            _rowerRentRepository = rowerRentRepository;
-            _rowerPriceRepository = rowerPriceRepository;
-            _transactionRepository = transactionRepository;
-            _serviceProvider = serviceProvider;
         }
 
         public IActionResult Index()
@@ -105,6 +95,27 @@ namespace SuperRower.Controllers
 
            
             return View("Index", bases);
+        }
+
+        [HttpGet]
+        public ViewResult PodziekowanieCustomer()
+        {
+            return View();
+        }
+
+
+        [HttpPost]
+        public ViewResult PodziekowanieCustomer(SuperRowerDB.Customer contact)
+        {
+            //TODO utrwalić dane w systemie
+            if (ModelState.IsValid)
+            {
+                return View("PodziekowanieCustomer", contact);
+            }
+            else
+            {
+                return View();
+            }
         }
     }
 }

@@ -10,23 +10,12 @@ namespace SuperRower.Controllers
 {
     public class RowerPriceController : Controller
     {
-        private readonly ICustomerRepository _customerRepository;
-        private readonly IRowerRentRepository _rowerRentRepository;
         private readonly IRowerPriceRepository _rowerPriceRepository;
-        private readonly ITransactionRepository _transactionRepository;
-        private readonly IServiceProvider _serviceProvider;
 
-        public RowerPriceController(ICustomerRepository customerRepository,
-                                 IRowerRentRepository rowerRentRepository,
-                                 IRowerPriceRepository rowerPriceRepository,
-                                  ITransactionRepository transactionRepository,
-                                 IServiceProvider serviceProvider)
+        public RowerPriceController(
+                                 IRowerPriceRepository rowerPriceRepository)
         {
-            _customerRepository = customerRepository;
-            _rowerRentRepository = rowerRentRepository;
             _rowerPriceRepository = rowerPriceRepository;
-            _transactionRepository = transactionRepository;
-            _serviceProvider = serviceProvider;
         }
 
         public IActionResult Index()

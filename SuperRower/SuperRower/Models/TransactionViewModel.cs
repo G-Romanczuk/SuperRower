@@ -12,9 +12,9 @@ namespace SuperRower.Models
         public int RowerPrice { get; set; }
         public string StartDate { get; set; }
         public string EndDate { get; set; }
-        public CustomerViewModel Customer { get; set; }
-        public RowerViewModel PackagePrice { get; set; }
-        public RowerPriceViewModel PackageType { get; set; }
+        public CustomerViewModel CustomerIF { get; set; }
+        public RowerViewModel RowerRentIF { get; set; }
+        public RowerPriceViewModel RowerPriceIF { get; set; }
       
     }
 }

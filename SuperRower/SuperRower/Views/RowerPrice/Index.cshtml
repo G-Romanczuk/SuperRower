@@ -5,19 +5,19 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Index</h1>
+<h1>Tabela cen rowerów</h1>
 
 <p>
-    <a asp-action="Add">Create New</a>
+   
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                RowerPriceID
+                Numer typu roweru
             </th>
             <th>
-                Price
+                Cena za dzień
             </th>
             <th></th>
         </tr>
@@ -33,7 +33,6 @@
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id=item.RowerPriceID }) |
-                @Html.ActionLink("Details", "Details", new { id=item.RowerPriceID }) |
                 @Html.ActionLink("Delete", "Delete", new {  id=item.RowerPriceID })
             </td>
         </tr>

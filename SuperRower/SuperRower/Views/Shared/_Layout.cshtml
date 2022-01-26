@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@inject SignInManager<IdentityUser> signInManager;
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -18,25 +19,44 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
+                        
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Customer" asp-action="Index">Klienci - dostęp po zalogowaniu</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Rower" asp-action="Index">Typy rowerów do wynajęcia</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Customer" asp-action="Index">Customers</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="RowerPrice" asp-action="Index">Ceny za rowery</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Rower" asp-action="Index">Rowery</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Transaction" asp-action="Index">Transakcje - dostęp po zalogowaniu</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="RowerPrice" asp-action="Index">Ceny</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Transaction" asp-action="Index">Transakcje</a>
-                        </li>
+
                     </ul>
+                    <ul class="navbar-nav ml-auto">
+
+                        @if (signInManager.IsSignedIn(User))
+                        {
+                            <li class="nav-item">
+                                <form method="post" asp-action="logout" asp-controller="account">
+                                    <button type="submit" class="alert-link btn btn-link py-0" style="width:auto">Logout @User.Identity.Name</button>
+                                </form>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a asp-action="Register" asp-controller="account" class="nav-link">Register</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a asp-action="Login" asp-controller="account" class="nav-link">Login</a>
+                            </li>
+                        }
+
+                    </ul>
+
                 </div>
             </div>
         </nav>
