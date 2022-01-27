@@ -13,7 +13,7 @@ namespace SuperRowerDB.Migrations
     [Migration("20220122191655_RowerRent")]
     partial class RowerRent
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected  void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

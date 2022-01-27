@@ -2,7 +2,7 @@
 
 namespace SuperRowerDB.Migrations
 {
-    public partial class RowerRent : Migration
+    public partial class RowerRents : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

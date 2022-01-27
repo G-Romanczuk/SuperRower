@@ -8,13 +8,11 @@ namespace SuperRower.Controllers
 {
     public class RowerController : Controller
     {
-        private readonly ICustomerRepository _customerRepository;
         private readonly IRowerRentRepository _rowerRentRepository;
 
-        public RowerController(ICustomerRepository customerRepository,
+        public RowerController(
                                  IRowerRentRepository rowerRentRepository)
         {
-            _customerRepository = customerRepository;
             _rowerRentRepository = rowerRentRepository;
         }
 

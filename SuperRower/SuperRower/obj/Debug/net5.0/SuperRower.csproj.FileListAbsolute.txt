@@ -219,3 +219,4 @@ C:\Users\gxbir\Desktop\Nowy folder\SuperRower\SuperRower\SuperRower\obj\Debug\ne
 C:\Users\gxbir\Desktop\Nowy folder\SuperRower\SuperRower\SuperRower\obj\Debug\net5.0\Razor\Views\Account\Login.cshtml.g.cs
 C:\Users\gxbir\Desktop\Nowy folder\SuperRower\SuperRower\SuperRower\obj\Debug\net5.0\Razor\Views\Account\Register.cshtml.g.cs
 C:\Users\gxbir\Desktop\Nowy folder\SuperRower\SuperRower\SuperRower\obj\Debug\net5.0\Razor\Views\Shared\_NonAdminLayout.cshtml.g.cs
+C:\Users\gxbir\Desktop\Nowy folder\SuperRower\SuperRower\SuperRower\obj\Debug\net5.0\Razor\Views\Buy\Index.cshtml.g.cs

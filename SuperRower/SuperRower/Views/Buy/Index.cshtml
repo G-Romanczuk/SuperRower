@@ -1,0 +1,61 @@
+﻿@model IEnumerable<SuperRower.Models.BuyViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Numer transakcji
+            </th>
+            <th>
+                cena
+            </th>
+            <th>
+                Nazwa modelu
+            </th>
+            <th>
+                Data wynajmu
+            </th>
+            <th>
+               Data końca wynajmu
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.trans.TransactionID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.typ.Model)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cena.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.trans.StartDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.trans.EndDate)  
+            </td>
+
+
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.trans.TransactionID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.trans.TransactionID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.trans.TransactionID })
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

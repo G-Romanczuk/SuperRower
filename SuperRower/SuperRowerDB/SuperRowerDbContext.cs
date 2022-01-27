@@ -10,14 +10,17 @@ namespace SuperRowerDB
 {
     public class SuperRowerDbContext : IdentityDbContext
     {
+        public SuperRowerDbContext(DbContextOptions options) : base(options)
+        {
+
+        }
+
+
+
         public DbSet<Customer> Customers { get; set; }
         public DbSet<RowerPrice> Prices { get; set; }
         public DbSet<RowerRent> RowerRents { get; set; }
         public DbSet<Transaction> Transactions { get; set; }
-
-        public SuperRowerDbContext(DbContextOptions options) : base(options) 
-        {
-            
-        }
+    
     }
 }
