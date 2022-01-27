@@ -10,52 +10,51 @@
 <p>
     <a asp-action="Add">Wynajmij rower!</a>
 </p>
-<table class="table">
+<table class="table table-striped" >
     <thead>
         <tr>
-            <th>
+            <th scope="col">
                Numer transakcji
             </th>
-            <th>
+            <th scope="col">
                Numer Klienta
             </th>
-            <th>
+            <th scope="col">
                Numer roweru cena
             </th>
-            <th>
+            <th scope="col">
                Numer roweru typ
-            </th>
-            <th>
+            </thscope="col">
+            <th scope="col">
               Data wynajęcia
             </th>
-            <th>
+            <th scope="col">
               Data oddania
             </th>
-            <th></th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model) {
         <tr>
-            <td>
+            <td scope="row">
                 @Html.DisplayFor(modelItem => item.TransactionID)
             </td>
-            <td>
+            <td scope="row">
                 @Html.DisplayFor(modelItem => item.CustomerIF)
             </td>
-            <td>
+            <td scope="row">
                 @Html.DisplayFor(modelItem => item.RowerPriceIF)
             </td>
-            <td>
+            <td scope="row">
                 @Html.DisplayFor(modelItem => item.RowerRentIF)
             </td>
-            <td>
+            <td scope="row">
                 @Html.DisplayFor(modelItem => item.StartDate)
             </td>
-            <td>
+            <td scope="row">
                 @Html.DisplayFor(modelItem => item.EndDate)
             </td>
-            <td>
+            <td scope="row">
                 @Html.ActionLink("Edit", "Edit", new { id=item.TransactionID }) |
                 @Html.ActionLink("Details", "Details", new { id = item.TransactionID }) |
                 @Html.ActionLink("Delete", "Delete", new { id = item.TransactionID })

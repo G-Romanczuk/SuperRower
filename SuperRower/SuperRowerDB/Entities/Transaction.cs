@@ -28,10 +28,9 @@ namespace SuperRowerDB
         public int RowerRentIF { get; set; }
         public virtual RowerRent RowerRent { get; set; }
         [Required(ErrorMessage = "Proszę podać datę rozpoczęcia wynajmu!")]
-        [RegularExpression("[0-9]{2}.[0-9]{2}.[0-9]{4}", ErrorMessage = "Proszę podać poprawną datę rozpoczęcia wynajmu dd.mm.rrrr!")]
         public string StartDate { get; set; }
         [Required(ErrorMessage = "Proszę podać datę Zakończenia wynajmu!")]
-        [RegularExpression("[0-9]{2}.[0-9]{2}.[0-9]{4}", ErrorMessage = "Proszę podać poprawną datę zakończenia wynajmu dd.mm.rrrr!")]
+        
         public string EndDate { get; set; }
     }
 }

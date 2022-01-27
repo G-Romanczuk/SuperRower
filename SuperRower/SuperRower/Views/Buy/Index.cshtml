@@ -16,10 +16,10 @@
                 Numer transakcji
             </th>
             <th>
-                cena
+                Nazwa modelu
             </th>
             <th>
-                Nazwa modelu
+               Cena za dzień
             </th>
             <th>
                 Data wynajmu
@@ -49,12 +49,6 @@
                 @Html.DisplayFor(modelItem => item.trans.EndDate)  
             </td>
 
-
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.trans.TransactionID }) |
-                @Html.ActionLink("Details", "Details", new { id = item.trans.TransactionID }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.trans.TransactionID })
-            </td>
         </tr>
         }
     </tbody>

@@ -65,49 +65,16 @@ namespace SuperRower.Controllers
 
 
         }
-            //where t.RowerRentIF == r.RowerRentID && t.RowerPriceIF == p.RowerPriceID
-            //       select new
-            //       {
-            //           start = t.StartDate,
-            //           end = t.EndDate,
-            //           model = r.Model,
-            //           prod = r.Producent,
-            //           rok = r.Year,
-            //           kraj = r.Country,
-            //           typ = r.Type,
-            //           cena = p.Price
-            //       };
-
+          
     //        foreach (var d in data)
     //        {
     //            DateTime pocz = Convert.ToDateTime(d.start);
     //    DateTime kon = Convert.ToDateTime(d.end);
     //    TimeSpan diff = kon - pocz;
     //}
-    //}
+    
 
-    //public IActionResult Display()
-    //{
-    //    var db = _db;
-    //        BuyViewModel joindata = (from t in db.Transactions
-    //                                 from r in db.RowerRents
-    //                                 from p in db.Prices
-    //                                 where t.RowerRentIF == r.RowerRentID && t.RowerPriceIF == p.RowerPriceID
-    //                                 select new
-    //                                 {
-    //                                     start = t.StartDate,
-    //                                     end = t.EndDate,
-    //                                     model = r.Model,
-    //                                     prod = r.Producent,
-    //                                     rok = r.Year,
-    //                                     kraj = r.Country,
-    //                                     typ = r.Type,
-    //                                     cena = p.Price
-    //                                 });
-
-    //        return view(joindata);
-
-    //}
+   
 
 }
 
