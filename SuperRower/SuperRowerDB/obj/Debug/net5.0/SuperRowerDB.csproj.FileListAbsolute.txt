@@ -4,6 +4,7 @@ C:\Users\gxbir\Desktop\Nowy folder\SuperRower\SuperRower\SuperRowerDB\bin\Debug\
 C:\Users\gxbir\Desktop\Nowy folder\SuperRower\SuperRower\SuperRowerDB\bin\Debug\net5.0\SuperRowerDB.dll
 C:\Users\gxbir\Desktop\Nowy folder\SuperRower\SuperRower\SuperRowerDB\bin\Debug\net5.0\ref\SuperRowerDB.dll
 C:\Users\gxbir\Desktop\Nowy folder\SuperRower\SuperRower\SuperRowerDB\bin\Debug\net5.0\SuperRowerDB.pdb
+C:\Users\gxbir\Desktop\Nowy folder\SuperRower\SuperRower\SuperRowerDB\obj\Debug\net5.0\SuperRowerDB.csproj.AssemblyReference.cache
 C:\Users\gxbir\Desktop\Nowy folder\SuperRower\SuperRower\SuperRowerDB\obj\Debug\net5.0\SuperRowerDB.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\gxbir\Desktop\Nowy folder\SuperRower\SuperRower\SuperRowerDB\obj\Debug\net5.0\SuperRowerDB.AssemblyInfoInputs.cache
 C:\Users\gxbir\Desktop\Nowy folder\SuperRower\SuperRower\SuperRowerDB\obj\Debug\net5.0\SuperRowerDB.AssemblyInfo.cs
@@ -12,4 +13,3 @@ C:\Users\gxbir\Desktop\Nowy folder\SuperRower\SuperRower\SuperRowerDB\obj\Debug\
 C:\Users\gxbir\Desktop\Nowy folder\SuperRower\SuperRower\SuperRowerDB\obj\Debug\net5.0\ref\SuperRowerDB.dll
 C:\Users\gxbir\Desktop\Nowy folder\SuperRower\SuperRower\SuperRowerDB\obj\Debug\net5.0\SuperRowerDB.pdb
 C:\Users\gxbir\Desktop\Nowy folder\SuperRower\SuperRower\SuperRowerDB\obj\Debug\net5.0\SuperRowerDB.genruntimeconfig.cache
-C:\Users\gxbir\Desktop\Nowy folder\SuperRower\SuperRower\SuperRowerDB\obj\Debug\net5.0\SuperRowerDB.csproj.AssemblyReference.cache

@@ -1,16 +1,18 @@
 ﻿@inject SignInManager<IdentityUser> signInManager;
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - SuperRower</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap-grid.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap-reboot.css" rel="stylesheet" />
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">SuperRower</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -21,19 +23,19 @@
                     <ul class="navbar-nav flex-grow-1">
 
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Customer" asp-action="Index">Klienci - dostęp po zalogowaniu</a>
+                            <a class="nav-link text-light" asp-area="" asp-controller="Customer" asp-action="Index">Klienci - dostęp po zalogowaniu</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Rower" asp-action="Index">Typy rowerów do wynajęcia</a>
+                            <a class="nav-link text-light" asp-area="" asp-controller="Rower" asp-action="Index">Typy rowerów do wynajęcia</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="RowerPrice" asp-action="Index">Ceny za rowery</a>
+                            <a class="nav-link text-light" asp-area="" asp-controller="RowerPrice" asp-action="Index">Ceny za rowery</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Transaction" asp-action="Index">Transakcje - dostęp po zalogowaniu</a>
+                            <a class="nav-link text-light" asp-area="" asp-controller="Transaction" asp-action="Index">Transakcje - dostęp po zalogowaniu</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Buy" asp-action="Index">Połączone dane transakcji</a>
+                            <a class="nav-link text-light" asp-area="" asp-controller="Buy" asp-action="Index">Połączone dane transakcji</a>
                         </li>
 
                     </ul>
@@ -43,7 +45,7 @@
                         {
                             <li class="nav-item">
                                 <form method="post" asp-action="logout" asp-controller="account">
-                                    <button type="submit" class="alert-link btn btn-link py-0" style="width:auto">Logout @User.Identity.Name</button>
+                                    <button type="submit" class="alert-link btn btn-link py-0 text-light" style="width:auto">Logout @User.Identity.Name</button>
                                 </form>
                             </li>
                         }

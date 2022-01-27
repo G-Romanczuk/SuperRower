@@ -1,9 +1,4 @@
 C:\Users\gxbir\Desktop\Nowy folder\SuperRower\SuperRower\Test\bin\Debug\net5.0\CoverletSourceRootsMapping
-C:\Users\gxbir\Desktop\Nowy folder\SuperRower\SuperRower\Test\obj\Debug\net5.0\Test.csproj.AssemblyReference.cache
-C:\Users\gxbir\Desktop\Nowy folder\SuperRower\SuperRower\Test\obj\Debug\net5.0\Test.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\gxbir\Desktop\Nowy folder\SuperRower\SuperRower\Test\obj\Debug\net5.0\Test.AssemblyInfoInputs.cache
-C:\Users\gxbir\Desktop\Nowy folder\SuperRower\SuperRower\Test\obj\Debug\net5.0\Test.AssemblyInfo.cs
-C:\Users\gxbir\Desktop\Nowy folder\SuperRower\SuperRower\Test\obj\Debug\net5.0\Test.csproj.CoreCompileInputs.cache
 C:\Users\gxbir\Desktop\Nowy folder\SuperRower\SuperRower\Test\bin\Debug\net5.0\testhost.dll
 C:\Users\gxbir\Desktop\Nowy folder\SuperRower\SuperRower\Test\bin\Debug\net5.0\SuperRower.Views.dll
 C:\Users\gxbir\Desktop\Nowy folder\SuperRower\SuperRower\Test\bin\Debug\net5.0\SuperRower.Views.pdb
@@ -218,6 +213,11 @@ C:\Users\gxbir\Desktop\Nowy folder\SuperRower\SuperRower\Test\bin\Debug\net5.0\S
 C:\Users\gxbir\Desktop\Nowy folder\SuperRower\SuperRower\Test\bin\Debug\net5.0\SuperRowerDB.dll
 C:\Users\gxbir\Desktop\Nowy folder\SuperRower\SuperRower\Test\bin\Debug\net5.0\SuperRower.pdb
 C:\Users\gxbir\Desktop\Nowy folder\SuperRower\SuperRower\Test\bin\Debug\net5.0\SuperRowerDB.pdb
+C:\Users\gxbir\Desktop\Nowy folder\SuperRower\SuperRower\Test\obj\Debug\net5.0\Test.csproj.AssemblyReference.cache
+C:\Users\gxbir\Desktop\Nowy folder\SuperRower\SuperRower\Test\obj\Debug\net5.0\Test.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gxbir\Desktop\Nowy folder\SuperRower\SuperRower\Test\obj\Debug\net5.0\Test.AssemblyInfoInputs.cache
+C:\Users\gxbir\Desktop\Nowy folder\SuperRower\SuperRower\Test\obj\Debug\net5.0\Test.AssemblyInfo.cs
+C:\Users\gxbir\Desktop\Nowy folder\SuperRower\SuperRower\Test\obj\Debug\net5.0\Test.csproj.CoreCompileInputs.cache
 C:\Users\gxbir\Desktop\Nowy folder\SuperRower\SuperRower\Test\obj\Debug\net5.0\Test.csproj.CopyComplete
 C:\Users\gxbir\Desktop\Nowy folder\SuperRower\SuperRower\Test\obj\Debug\net5.0\Test.dll
 C:\Users\gxbir\Desktop\Nowy folder\SuperRower\SuperRower\Test\obj\Debug\net5.0\ref\Test.dll
