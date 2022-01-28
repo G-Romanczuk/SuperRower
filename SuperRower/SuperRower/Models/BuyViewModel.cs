@@ -4,7 +4,6 @@ using SuperRowerDB;
 using SuperRower.Models;
 using Microsoft.AspNetCore.Authorization;
 using System;
-using SuperRowerDB.Migrations;
 
 namespace SuperRower.Models
 {

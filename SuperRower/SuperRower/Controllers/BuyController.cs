@@ -5,7 +5,7 @@ using SuperRower.Models;
 using Microsoft.AspNetCore.Authorization;
 using System;
 using System.Collections.Generic;
-using SuperRowerDB.Migrations;
+
 
 namespace SuperRower.Controllers
 {

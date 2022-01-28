@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace SuperRowerDB.Migrations
 {
-    public partial class Identity : Migration
+    public partial class AddMigToDb : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -44,6 +44,56 @@ namespace SuperRowerDB.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetUsers", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Customers",
+                columns: table => new
+                {
+                    CustomerID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    NameCustomer = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
+                    LastNameCustomer = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
+                    TelCustomer = table.Column<string>(type: "nvarchar(9)", maxLength: 9, nullable: false),
+                    CityAdressCustomer = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    StreetAdressCustomer = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    BuildingAdressCustomer = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ApartmentAdressCustomer = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    KodCustomer = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Customers", x => x.CustomerID);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Prices",
+                columns: table => new
+                {
+                    RowerPriceID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Price = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Prices", x => x.RowerPriceID);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "RowerRents",
+                columns: table => new
+                {
+                    RowerRentID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Model = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
+                    Producent = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
+                    Country = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Year = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Type = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_RowerRents", x => x.RowerRentID);
                 });
 
             migrationBuilder.CreateTable(
@@ -152,6 +202,41 @@ namespace SuperRowerDB.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "Transactions",
+                columns: table => new
+                {
+                    TransactionID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    CustomerIF = table.Column<int>(type: "int", nullable: false),
+                    RowerPriceIF = table.Column<int>(type: "int", nullable: false),
+                    RowerRentIF = table.Column<int>(type: "int", nullable: false),
+                    StartDate = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    EndDate = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Transactions", x => x.TransactionID);
+                    table.ForeignKey(
+                        name: "FK_Transactions_Customers_CustomerIF",
+                        column: x => x.CustomerIF,
+                        principalTable: "Customers",
+                        principalColumn: "CustomerID",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Transactions_Prices_RowerPriceIF",
+                        column: x => x.RowerPriceIF,
+                        principalTable: "Prices",
+                        principalColumn: "RowerPriceID",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Transactions_RowerRents_RowerRentIF",
+                        column: x => x.RowerRentIF,
+                        principalTable: "RowerRents",
+                        principalColumn: "RowerRentID",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
                 table: "AspNetRoleClaims",
@@ -190,6 +275,21 @@ namespace SuperRowerDB.Migrations
                 column: "NormalizedUserName",
                 unique: true,
                 filter: "[NormalizedUserName] IS NOT NULL");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Transactions_CustomerIF",
+                table: "Transactions",
+                column: "CustomerIF");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Transactions_RowerPriceIF",
+                table: "Transactions",
+                column: "RowerPriceIF");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Transactions_RowerRentIF",
+                table: "Transactions",
+                column: "RowerRentIF");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -210,10 +310,22 @@ namespace SuperRowerDB.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
+                name: "Transactions");
+
+            migrationBuilder.DropTable(
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
+
+            migrationBuilder.DropTable(
+                name: "Customers");
+
+            migrationBuilder.DropTable(
+                name: "Prices");
+
+            migrationBuilder.DropTable(
+                name: "RowerRents");
         }
     }
 }
