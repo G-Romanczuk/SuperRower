@@ -19,12 +19,12 @@ namespace SuperRowerDB
         public virtual Customer Customer { get; set; }
         [ForeignKey("RowerPrice")]
         [Required(ErrorMessage = "Proszę podać numer roweru!")]
-        [Range(1, 3, ErrorMessage = "Proszę podać poprawny numer roweru!")]
+        [Range(1, 4, ErrorMessage = "Proszę podać poprawny numer roweru!")]
         public int RowerPriceIF { get; set; }
         public virtual RowerPrice RowerPrice { get; set; }
         [ForeignKey("RowerRent")]
         [Required(ErrorMessage = "Proszę podać numer ceny roweru!")]
-        [Range(1, 3, ErrorMessage = "Proszę podać poprawny numer ceny roweru!")]
+        [Range(1, 4, ErrorMessage = "Proszę podać poprawny numer ceny roweru!")]
         public int RowerRentIF { get; set; }
         public virtual RowerRent RowerRent { get; set; }
         [Required(ErrorMessage = "Proszę podać datę rozpoczęcia wynajmu!")]
