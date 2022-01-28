@@ -43,6 +43,6 @@ namespace SuperRowerDB
         [Required(ErrorMessage = "Proszę podać kod pocztowy Klienta!")]
         [RegularExpression("[0-9]{2}-[0-9]{3}", ErrorMessage = "Proszę podać poprawny kod pocztowy Klienta!")]
         public string KodCustomer { get; set; }
-
+        //
     }
 }
