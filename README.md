@@ -22,7 +22,8 @@ Aby sprawdzić wszystkie możliwości strony należy:
             Numer Klienta wpisać numer przykładowego klienta z Klienci
             Numer Ceny wpisać numer przykładowej ceny z Ceny za rowery
             Numer Roweru wpisać numer przykładowego roweru z typy rowerów
-            
+          
+Do api dostajemy się wpisując .../api/API/    
             
            Gotowe! Dostępna jest pełna funkcjinalność strony
 
