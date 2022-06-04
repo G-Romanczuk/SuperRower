@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gxbir\\Desktop\\Nowy folder\\SuperRower\\SuperRower\\SuperRower\\SuperRower.csproj": {}
+    "C:\\Users\\gxbir\\Desktop\\SuperRower\\SuperRower\\SuperRower\\SuperRower\\SuperRower.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gxbir\\Desktop\\Nowy folder\\SuperRower\\SuperRower\\SuperRowerDB\\SuperRowerDB.csproj": {
+    "C:\\Users\\gxbir\\Desktop\\SuperRower\\SuperRower\\SuperRower\\SuperRowerDB\\SuperRowerDB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gxbir\\Desktop\\Nowy folder\\SuperRower\\SuperRower\\SuperRowerDB\\SuperRowerDB.csproj",
+        "projectUniqueName": "C:\\Users\\gxbir\\Desktop\\SuperRower\\SuperRower\\SuperRower\\SuperRowerDB\\SuperRowerDB.csproj",
         "projectName": "SuperRowerDB",
-        "projectPath": "C:\\Users\\gxbir\\Desktop\\Nowy folder\\SuperRower\\SuperRower\\SuperRowerDB\\SuperRowerDB.csproj",
+        "projectPath": "C:\\Users\\gxbir\\Desktop\\SuperRower\\SuperRower\\SuperRower\\SuperRowerDB\\SuperRowerDB.csproj",
         "packagesPath": "C:\\Users\\gxbir\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gxbir\\Desktop\\Nowy folder\\SuperRower\\SuperRower\\SuperRowerDB\\obj\\",
+        "outputPath": "C:\\Users\\gxbir\\Desktop\\SuperRower\\SuperRower\\SuperRower\\SuperRowerDB\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\gxbir\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -78,25 +74,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\gxbir\\Desktop\\Nowy folder\\SuperRower\\SuperRower\\SuperRower\\SuperRower.csproj": {
+    "C:\\Users\\gxbir\\Desktop\\SuperRower\\SuperRower\\SuperRower\\SuperRower\\SuperRower.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gxbir\\Desktop\\Nowy folder\\SuperRower\\SuperRower\\SuperRower\\SuperRower.csproj",
+        "projectUniqueName": "C:\\Users\\gxbir\\Desktop\\SuperRower\\SuperRower\\SuperRower\\SuperRower\\SuperRower.csproj",
         "projectName": "SuperRower",
-        "projectPath": "C:\\Users\\gxbir\\Desktop\\Nowy folder\\SuperRower\\SuperRower\\SuperRower\\SuperRower.csproj",
+        "projectPath": "C:\\Users\\gxbir\\Desktop\\SuperRower\\SuperRower\\SuperRower\\SuperRower\\SuperRower.csproj",
         "packagesPath": "C:\\Users\\gxbir\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gxbir\\Desktop\\Nowy folder\\SuperRower\\SuperRower\\SuperRower\\obj\\",
+        "outputPath": "C:\\Users\\gxbir\\Desktop\\SuperRower\\SuperRower\\SuperRower\\SuperRower\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\gxbir\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -110,8 +102,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\gxbir\\Desktop\\Nowy folder\\SuperRower\\SuperRower\\SuperRowerDB\\SuperRowerDB.csproj": {
-                "projectPath": "C:\\Users\\gxbir\\Desktop\\Nowy folder\\SuperRower\\SuperRower\\SuperRowerDB\\SuperRowerDB.csproj"
+              "C:\\Users\\gxbir\\Desktop\\SuperRower\\SuperRower\\SuperRower\\SuperRowerDB\\SuperRowerDB.csproj": {
+                "projectPath": "C:\\Users\\gxbir\\Desktop\\SuperRower\\SuperRower\\SuperRower\\SuperRowerDB\\SuperRowerDB.csproj"
               }
             }
           }
@@ -175,7 +167,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }

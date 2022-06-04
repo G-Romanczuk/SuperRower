@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EPKRpXPrMGajKcpvLiIsoIXsUkIn3tcSTClKlGEYbhaqlrc72P9NR6zlxXm8eA53zuhi8J2KUafqP4ybvD/TXg==",
+  "dgSpecHash": "OlQGEsxiGghhx1hKCg3ZPV+ww8Srv2qxb5KtTZoWnLUmD3RTyqjxLe/w+jPTRCwkS+Ph72iWsoOCDht/03oSGg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\gxbir\\Desktop\\Nowy folder\\SuperRower\\SuperRower\\SuperRower\\SuperRower.csproj",
+  "projectFilePath": "C:\\Users\\gxbir\\Desktop\\SuperRower\\SuperRower\\SuperRower\\SuperRower\\SuperRower.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gxbir\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\gxbir\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",

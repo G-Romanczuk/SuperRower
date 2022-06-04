@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hr7VQqdKbCa4nuy3raceYZJieKJpew2MEipGqlRaK6GbiqFXtDj1/0Z7zfyUOX9+WPxYiV7+uZkPWT++axBkYA==",
+  "dgSpecHash": "OdWeFB4bLgLxHa+V8hlGy4SN5WNtt4/GrfMOz8pKi5H4c9FAxSJuofMr+ymN6NQJh9JtI1i74PPqeqZ2f/g6FA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\gxbir\\Desktop\\Nowy folder\\SuperRower\\SuperRower\\SuperRowerDB\\SuperRowerDB.csproj",
+  "projectFilePath": "C:\\Users\\gxbir\\Desktop\\SuperRower\\SuperRower\\SuperRower\\SuperRowerDB\\SuperRowerDB.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gxbir\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\gxbir\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.13\\microsoft.aspnetcore.cryptography.internal.5.0.13.nupkg.sha512",

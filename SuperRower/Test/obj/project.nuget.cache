@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tFTpajaVFY2tFsmxrAQV2NosFKwsobqUljpKGCFWfSPXy8OL1H+jqX+3sGYO638brEOcZEg/fSgZ1gupaYzBCA==",
+  "dgSpecHash": "aLRvuUWOFlsbIH/k045RgzM87yOnhiPCRn+muAsoo7SaYy+uFn6vic/iFybWWSUVQpj7incXkY8LH/Zotwsu9Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\gxbir\\Desktop\\Nowy folder\\SuperRower\\SuperRower\\Test\\Test.csproj",
+  "projectFilePath": "C:\\Users\\gxbir\\Desktop\\SuperRower\\SuperRower\\SuperRower\\Test\\Test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gxbir\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
     "C:\\Users\\gxbir\\.nuget\\packages\\coverlet.collector\\3.0.2\\coverlet.collector.3.0.2.nupkg.sha512",
